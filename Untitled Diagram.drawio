@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2024-05-24T21:46:34.393Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0" etag="XYP6iWW1HdukhL07IDpX" version="24.4.0" type="github">
+  <diagram name="Page-1" id="N0bXBx3RlmEXDFfYEyNw">
+    <mxGraphModel dx="1468" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DSRLR43MouLU-vdsQECh-1" value="Home Screen&lt;div&gt;1- New Order&amp;nbsp;&lt;/div&gt;&lt;div&gt;2 - Exit&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="70" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-3" value="Order Screen&amp;nbsp;&lt;div&gt;1 - add sandwich&lt;/div&gt;&lt;div&gt;2 - add drink&lt;/div&gt;&lt;div&gt;3 - add chips&lt;/div&gt;&lt;div&gt;4- checkout&lt;/div&gt;&lt;div&gt;5- cancel order 6&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="250" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-4" value="Add Sandwich&amp;nbsp;&lt;div&gt;- select bread&lt;/div&gt;&lt;div&gt;-sandwich size&lt;/div&gt;&lt;div&gt;-toppings&lt;/div&gt;&lt;div&gt;1-meat&lt;/div&gt;&lt;div&gt;2-cheese&lt;/div&gt;&lt;div&gt;3-other toppings&lt;/div&gt;&lt;div&gt;4-selected sauces&amp;nbsp;&lt;/div&gt;&lt;div&gt;5- would you like it toasted&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="450" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-5" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1390" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-6" value="Add Drink - select size" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-95" y="515" width="95" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-7" value="Add Chips&lt;div&gt;-select chip type&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="390" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-8" value="Checkout&lt;div&gt;-confirm&lt;/div&gt;&lt;div&gt;-cancel&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-10" value="Product&lt;div&gt;-name&lt;/div&gt;&lt;div&gt;-size&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="730" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="DSRLR43MouLU-vdsQECh-11" value="toppings" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="860" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
