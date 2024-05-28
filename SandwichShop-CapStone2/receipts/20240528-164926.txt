@@ -1,0 +1,7 @@
+Order Details:
+
+Sandwich: julian's sandwich on white bread, Size: 4, Price: 7.25
+Toppings: steak, american, lettuce
+Sauces: mayo
+
+Total Price: 7.25

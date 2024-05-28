@@ -2,24 +2,21 @@ package com.pluralsight.models;
 
 public class Drink extends Products implements Size
 {
-    public Drink(String name, String size, double price)
+    private String size;
+
+    public Drink(String name, double price, String size)
     {
-        super(name, size, price);
+        super(name, price);
+        this.size = size;
     }
 
     @Override
-    public String getName() {
-        return super.getName();
+    public String getSize() {
+        return this.size;
     }
 
-    @Override
-    public double getPrice() {
-        return super.getPrice();
-    }
-
-    @Override
-    public String getSize()
+    public void setSize(String size)
     {
-        return "";
+        this.size = size;
     }
 }
