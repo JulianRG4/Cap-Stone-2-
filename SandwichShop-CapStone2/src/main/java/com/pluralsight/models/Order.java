@@ -22,19 +22,39 @@ public class Order {
         drinks.add(drink);
     }
 
-    public void addChips(Chips chips) {
-        this.chips.add(chips);
+    public void addChips(Chips chip) {
+        chips.add(chip);
     }
 
-    public List<Sandwich> getSandwiches() {
-        return sandwiches;
+    public double calculateTotalPrice() {
+        double total = 0.0;
+        for (Sandwich sandwich : sandwiches) {
+            total += sandwich.getPrice();
+        }
+        for (Drink drink : drinks) {
+            total += drink.getPrice();
+        }
+        for (Chips chip : chips) {
+            total += chip.getPrice();
+        }
+        return total;
     }
 
-    public List<Drink> getDrinks() {
-        return drinks;
-    }
-
-    public List<Chips> getChips() {
-        return chips;
+    @Override
+    public String toString() {
+        StringBuilder orderDetails = new StringBuilder("Order Details:\n");
+        orderDetails.append("Sandwiches:\n");
+        for (Sandwich sandwich : sandwiches) {
+            orderDetails.append(sandwich).append("\n");
+        }
+        orderDetails.append("Drinks:\n");
+        for (Drink drink : drinks) {
+            orderDetails.append(drink).append("\n");
+        }
+        orderDetails.append("Chips:\n");
+        for (Chips chip : chips) {
+            orderDetails.append(chip).append("\n");
+        }
+        return orderDetails.toString();
     }
 }

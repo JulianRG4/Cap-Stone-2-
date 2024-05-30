@@ -1,10 +1,12 @@
 package com.pluralsight.models;
 
-public abstract class Products {
+public abstract class Products
+{
     private String name;
     private double price;
 
-    public Products(String name, double price) {
+    public Products(String name, double price)
+    {
         this.name = name;
         this.price = price;
     }
