@@ -1,22 +1,30 @@
 package com.pluralsight.models;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Sandwich
-{
+public class Sandwich {
     private String name;
     private String breadType;
     private boolean toasted;
     private String size;
-    private List<String> toppings;
+    private List<String> premiumMeats;
+    private List<String> premiumCheeses;
+    private List<String> regularToppings;
+    private List<String> sauces;
+    private List<String> sides;
     private double price;
 
-    public Sandwich(String name, String breadType, boolean toasted, String size, List<String> toppings) {
+    public Sandwich(String name, String breadType, boolean toasted, String size, List<String> premiumMeats, List<String> premiumCheeses, List<String> regularToppings, List<String> sauces, List<String> sides) {
         this.name = name;
         this.breadType = breadType;
         this.toasted = toasted;
         this.size = size;
-        this.toppings = toppings;
+        this.premiumMeats = premiumMeats;
+        this.premiumCheeses = premiumCheeses;
+        this.regularToppings = regularToppings;
+        this.sauces = sauces;
+        this.sides = sides;
         this.price = calculateBasePrice(size);
     }
 
@@ -44,11 +52,29 @@ public class Sandwich
     @Override
     public String toString() {
         return "Sandwich[" +
-                "Name: " + name  +
-                ", breadType: " + breadType  +
+                "Name: " + name +
+                ", Bread Type: " + breadType +
                 ", Is Toasted: " + toasted +
-                ", size: " + size + '"' +
-                ", price: " + price +
+                ", Size: " + size + '"' +
+                ", Premium Meats: " + mapSelectionsToNames(premiumMeats, PremiumToppings.getPremiumMeats()) +
+                ", Premium Cheeses: " + mapSelectionsToNames(premiumCheeses, PremiumToppings.getPremiumCheeses()) +
+                ", Regular Toppings: " + mapSelectionsToNames(regularToppings, RegularToppings.getRegularToppings()) +
+                ", Sauces: " + mapSelectionsToNames(sauces, RegularToppings.getSauces()) +
+                ", Sides: " + mapSelectionsToNames(sides, RegularToppings.getSides()) +
+                ", Price: $" + String.format("%.2f", price) +
                 ']';
+    }
+
+    private List<String> mapSelectionsToNames(List<String> selections, List<String> availableOptions) {
+        return selections.stream()
+                .map(selection -> {
+                    try {
+                        int index = Integer.parseInt(selection) - 1;
+                        return availableOptions.get(index);
+                    } catch (NumberFormatException | IndexOutOfBoundsException e) {
+                        return "Invalid selection";
+                    }
+                })
+                .collect(Collectors.toList());
     }
 }

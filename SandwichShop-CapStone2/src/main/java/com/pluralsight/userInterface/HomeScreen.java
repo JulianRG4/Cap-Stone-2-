@@ -83,8 +83,7 @@ public class HomeScreen {
         System.out.print("Enter your choice: ");
     }
 
-    private static void addSandwich(Order order)
-    {
+    private static void addSandwich(Order order) {
         System.out.println("Adding Sandwich:");
 
         System.out.print("Name on sandwich: ");
@@ -92,16 +91,24 @@ public class HomeScreen {
         String breadType = chooseBreadType();
         String size = chooseSandwichSize();
 
-        List<String> toppings = new ArrayList<>();
-        double extraMeatPrice = chooseAndAddMeats(toppings, size);
-        double extraCheesePrice = chooseAndAddCheeses(toppings, size);
-        chooseAndAddRegularToppings(toppings);
-        chooseAndAddSauces(toppings);
-        chooseAndAddSides(toppings);
+        List<String> premiumMeats = new ArrayList<>();
+        double extraMeatPrice = chooseAndAddMeats(premiumMeats, size);
+
+        List<String> premiumCheeses = new ArrayList<>();
+        double extraCheesePrice = chooseAndAddCheeses(premiumCheeses, size);
+
+        List<String> regularToppings = new ArrayList<>();
+        chooseAndAddRegularToppings(regularToppings);
+
+        List<String> sauces = new ArrayList<>();
+        chooseAndAddSauces(sauces);
+
+        List<String> sides = new ArrayList<>();
+        chooseAndAddSides(sides);
 
         boolean toasted = askForToastingPreference();
 
-        Sandwich sandwich = new Sandwich(name, breadType, toasted, size, toppings);
+        Sandwich sandwich = new Sandwich(name, breadType, toasted, size, premiumMeats, premiumCheeses, regularToppings, sauces, sides);
         sandwich.addPrice(extraMeatPrice);
         sandwich.addPrice(extraCheesePrice);
         order.addSandwich(sandwich);
@@ -110,7 +117,7 @@ public class HomeScreen {
         System.out.println(sandwich);
     }
 
-    private static double chooseAndAddMeats(List<String> toppings, String size) {
+    private static double chooseAndAddMeats(List<String> premiumMeats, String size) {
         System.out.println("Available meat toppings:");
         printOptions(PremiumToppings.getPremiumMeats());
         System.out.println("Choose meat toppings (separated by ',') or type 'none':");
@@ -121,7 +128,7 @@ public class HomeScreen {
             String[] meats = meatsInput.split(",");
             for (int i = 0; i < meats.length; i++) {
                 String meat = meats[i].trim();
-                toppings.add(meat);
+                premiumMeats.add(meat);
 
                 if (i == 0) {
                     meatPrice += new PremiumToppings("meat").getBasePrice(size);
@@ -133,7 +140,7 @@ public class HomeScreen {
         return meatPrice;
     }
 
-    private static double chooseAndAddCheeses(List<String> toppings, String size) {
+    private static double chooseAndAddCheeses(List<String> premiumCheeses, String size) {
         System.out.println("Available cheese toppings:");
         printOptions(PremiumToppings.getPremiumCheeses());
         System.out.println("Choose cheese toppings (separated by ',') or type 'none':");
@@ -144,7 +151,7 @@ public class HomeScreen {
             String[] cheeses = cheesesInput.split(",");
             for (int i = 0; i < cheeses.length; i++) {
                 String cheese = cheeses[i].trim();
-                toppings.add(cheese);
+                premiumCheeses.add(cheese);
 
                 if (i == 0) {
                     cheesePrice += new PremiumToppings("cheese").getBasePrice(size);
@@ -156,44 +163,41 @@ public class HomeScreen {
         return cheesePrice;
     }
 
-    private static void chooseAndAddRegularToppings(List<String> toppings) {
+    private static void chooseAndAddRegularToppings(List<String> regularToppings) {
         System.out.println("Available regular toppings:");
         printOptions(RegularToppings.getRegularToppings());
         System.out.println("Choose regular toppings (separated by ',') or type 'none':");
         String regularToppingsInput = scanner.nextLine().trim().toLowerCase();
         if (!regularToppingsInput.equals("none")) {
-            String[] regularToppings = regularToppingsInput.split(",");
-            for (String topping : regularToppings) {
-                toppings.add(topping.trim());
+            String[] regularToppingsArray = regularToppingsInput.split(",");
+            for (String topping : regularToppingsArray) {
+                regularToppings.add(topping.trim());
             }
         }
     }
 
-    private static void chooseAndAddSauces(List<String> toppings) {
+    private static void chooseAndAddSauces(List<String> sauces) {
         System.out.println("Available sauces:");
         printOptions(RegularToppings.getSauces());
         System.out.println("Choose sauce toppings (separated by ',') or type 'none':");
         String saucesInput = scanner.nextLine().trim().toLowerCase();
         if (!saucesInput.equals("none")) {
-            String[] sauces = saucesInput.split(",");
-            for (String sauce : sauces) {
-                toppings.add(sauce.trim());
+            String[] saucesArray = saucesInput.split(",");
+            for (String sauce : saucesArray) {
+                sauces.add(sauce.trim());
             }
         }
     }
 
-    private static void chooseAndAddSides(List<String> toppings)
-    {
+    private static void chooseAndAddSides(List<String> sides) {
         System.out.println("Available sides:");
         printOptions(RegularToppings.getSides());
         System.out.println("Choose side toppings (separated by ',') or type 'none':");
         String sidesInput = scanner.nextLine().trim().toLowerCase();
-        if (!sidesInput.equals("none"))
-        {
-            String[] sides = sidesInput.split(",");
-            for (String side : sides)
-            {
-                toppings.add(side.trim());
+        if (!sidesInput.equals("none")) {
+            String[] sidesArray = sidesInput.split(",");
+            for (String side : sidesArray) {
+                sides.add(side.trim());
             }
         }
     }
@@ -269,6 +273,7 @@ public class HomeScreen {
     }
 
     private static String chooseDrinkSize() {
+        System.out.println();
         System.out.println("Choose drink size:");
         System.out.println("1) Small");
         System.out.println("2) Medium");
@@ -295,6 +300,7 @@ public class HomeScreen {
     }
 
     private static void addChips(Order order) {
+        System.out.println();
         System.out.println("Adding Chips:");
 
         String type = chooseChipType();
@@ -310,10 +316,8 @@ public class HomeScreen {
         return scanner.nextLine();
     }
 
-    private static void checkout(Order order)
-    {
+    private static void checkout(Order order) {
         System.out.println("\nCheckout");
-        System.out.println("Order details:");
         System.out.println(order);
         double totalPrice = order.calculateTotalPrice();
         System.out.println("Total price: $" + String.format("%.2f", totalPrice));
@@ -322,15 +326,13 @@ public class HomeScreen {
         System.out.println("0) Cancel");
         int choice = scanner.nextInt();
         scanner.nextLine();
-        if (choice == 1)
-        {
+        if (choice == 1) {
             ReceiptWriter.saveOrderReceipt(order);
             System.out.println("\n----------------------");
             System.out.println("Order confirmed. Thank you!");
             System.out.println("----------------------\n");
-
-        } else
-        {
+            System.exit(0); // Terminate the application
+        } else {
             System.out.println("\n----------------------");
             System.out.println("Order cancelled.");
             System.out.println("----------------------\n");

@@ -6,12 +6,23 @@ import java.util.List;
 public class Order {
     private List<Sandwich> sandwiches;
     private List<Drink> drinks;
-    private List<Chips> chips;
+    private Chips chips;
 
     public Order() {
-        sandwiches = new ArrayList<>();
-        drinks = new ArrayList<>();
-        chips = new ArrayList<>();
+        this.sandwiches = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+    }
+
+    public List<Sandwich> getSandwiches() {
+        return sandwiches;
+    }
+
+    public List<Drink> getDrinks() {
+        return drinks;
+    }
+
+    public Chips getChips() {
+        return chips;
     }
 
     public void addSandwich(Sandwich sandwich) {
@@ -22,39 +33,46 @@ public class Order {
         drinks.add(drink);
     }
 
-    public void addChips(Chips chip) {
-        chips.add(chip);
+    public void addChips(Chips chips) {
+        this.chips = chips;
     }
 
     public double calculateTotalPrice() {
-        double total = 0.0;
+        double totalPrice = 0.0;
         for (Sandwich sandwich : sandwiches) {
-            total += sandwich.getPrice();
+            totalPrice += sandwich.getPrice();
         }
         for (Drink drink : drinks) {
-            total += drink.getPrice();
+            totalPrice += drink.getPrice();
         }
-        for (Chips chip : chips) {
-            total += chip.getPrice();
-        }
-        return total;
+        return totalPrice;
     }
 
     @Override
     public String toString() {
-        StringBuilder orderDetails = new StringBuilder("Order Details:\n");
-        orderDetails.append("Sandwiches:\n");
-        for (Sandwich sandwich : sandwiches) {
-            orderDetails.append(sandwich).append("\n");
+        StringBuilder builder = new StringBuilder();
+        builder.append("Checkout\n");
+        builder.append("Order Details:\n");
+        builder.append("Sandwiches:\n");
+        if (sandwiches.isEmpty()) {
+            builder.append("No sandwiches\n");
+        } else {
+            for (Sandwich sandwich : sandwiches) {
+                builder.append(sandwich.toString()).append("\n");
+            }
         }
-        orderDetails.append("Drinks:\n");
-        for (Drink drink : drinks) {
-            orderDetails.append(drink).append("\n");
+        builder.append("Drinks:\n");
+        if (drinks.isEmpty()) {
+            builder.append("No drinks\n");
+        } else {
+            for (Drink drink : drinks) {
+                builder.append(drink.toString()).append("\n");
+            }
         }
-        orderDetails.append("Chips:\n");
-        for (Chips chip : chips) {
-            orderDetails.append(chip).append("\n");
-        }
-        return orderDetails.toString();
+        builder.append("Chips:\n");
+        builder.append(chips == null ? "No chips\n" : chips.toString() + "\n");
+        double totalPrice = calculateTotalPrice();
+        builder.append("Total price: $").append(String.format("%.2f", totalPrice)).append("\n");
+        return builder.toString();
     }
 }
