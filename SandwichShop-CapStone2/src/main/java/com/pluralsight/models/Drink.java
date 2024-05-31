@@ -4,7 +4,7 @@ public class Drink extends Products implements Size {
     private String size;
 
     public Drink(String name, String size) {
-        super(name, calculatePrice(size)); // Pass the calculated price based on size
+        super(name, calculatePrice(size));
         setSize(size);
     }
 

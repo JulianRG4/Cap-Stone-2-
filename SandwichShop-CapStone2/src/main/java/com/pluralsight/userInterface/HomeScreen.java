@@ -331,7 +331,7 @@ public class HomeScreen {
             System.out.println("\n----------------------");
             System.out.println("Order confirmed. Thank you!");
             System.out.println("----------------------\n");
-            System.exit(0); // Terminate the application
+            System.exit(0);
         } else {
             System.out.println("\n----------------------");
             System.out.println("Order cancelled.");

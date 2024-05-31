@@ -75,10 +75,10 @@ public class PremiumToppings extends Toppings {
     public double getPrice(String size, int count) {
         double price = 0.0;
         if (count > 0) {
-            price += getBasePrice(size); // Add base price for the first topping
+            price += getBasePrice(size);
         }
         if (count > 1) {
-            price += getExtraPrice(size) * (count - 1); // Add extra price for additional toppings
+            price += getExtraPrice(size) * (count - 1);
         }
         return price;
     }
