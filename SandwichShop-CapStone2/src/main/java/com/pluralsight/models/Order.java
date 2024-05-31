@@ -53,7 +53,7 @@ public class Order {
         StringBuilder builder = new StringBuilder();
         builder.append("Checkout\n");
         builder.append("Order Details:\n");
-        builder.append("Sandwiches:\n");
+        builder.append("-Sandwiches-\n");
         if (sandwiches.isEmpty()) {
             builder.append("No sandwiches\n");
         } else {
@@ -61,7 +61,6 @@ public class Order {
                 builder.append(sandwich.toString()).append("\n");
             }
         }
-        builder.append("Drinks:\n");
         if (drinks.isEmpty()) {
             builder.append("No drinks\n");
         } else {
@@ -69,7 +68,7 @@ public class Order {
                 builder.append(drink.toString()).append("\n");
             }
         }
-        builder.append("Chips:\n");
+
         builder.append(chips == null ? "No chips\n" : chips.toString() + "\n");
         double totalPrice = calculateTotalPrice();
         builder.append("Total price: $").append(String.format("%.2f", totalPrice)).append("\n");

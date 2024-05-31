@@ -1,0 +1,9 @@
+Checkout
+Order Details:
+Sandwiches:
+[Sandwich[Name: Julian, Bread Type: White, Is Toasted: true, Size: 4"", Premium Meats: [bacon, chicken], Premium Cheeses: [provolone], Regular Toppings: [lettuce, onions, tomatoes, jalapenos, guacamole], Sauces: [mayo, mustard], Sides: [au jus], Price: $7.75]]
+Drinks:
+[Drink: Coke (Size: Small, Price: $2.0)]
+Chips:
+Chips: Lays (Price: $1.5)
+Total price: $9.75

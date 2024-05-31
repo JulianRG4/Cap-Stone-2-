@@ -37,6 +37,7 @@ public class HomeScreen {
     private static void displayHomeOptions()
     {
         System.out.println();
+        System.out.println("---Julian's Sizzling Sandwich Shop---");
         System.out.println("Home Screen");
         System.out.println("1) New Order");
         System.out.println("0) Exit");
@@ -74,7 +75,8 @@ public class HomeScreen {
     }
 
     private static void displayOrderOptions() {
-        System.out.println("\nOrder Screen");
+        System.out.println();
+        System.out.println("---Order Screen---");
         System.out.println("1) Add Sandwich");
         System.out.println("2) Add Drink");
         System.out.println("3) Add Chips");
@@ -84,7 +86,8 @@ public class HomeScreen {
     }
 
     private static void addSandwich(Order order) {
-        System.out.println("Adding Sandwich:");
+        System.out.println();
+        System.out.println("---Adding Sandwich---");
 
         System.out.print("Name on sandwich: ");
         String name = scanner.nextLine();
@@ -118,6 +121,7 @@ public class HomeScreen {
     }
 
     private static double chooseAndAddMeats(List<String> premiumMeats, String size) {
+        System.out.println();
         System.out.println("Available meat toppings:");
         printOptions(PremiumToppings.getPremiumMeats());
         System.out.println("Choose meat toppings (separated by ',') or type 'none':");
@@ -141,6 +145,7 @@ public class HomeScreen {
     }
 
     private static double chooseAndAddCheeses(List<String> premiumCheeses, String size) {
+        System.out.println();
         System.out.println("Available cheese toppings:");
         printOptions(PremiumToppings.getPremiumCheeses());
         System.out.println("Choose cheese toppings (separated by ',') or type 'none':");
@@ -164,6 +169,7 @@ public class HomeScreen {
     }
 
     private static void chooseAndAddRegularToppings(List<String> regularToppings) {
+        System.out.println();
         System.out.println("Available regular toppings:");
         printOptions(RegularToppings.getRegularToppings());
         System.out.println("Choose regular toppings (separated by ',') or type 'none':");
@@ -177,6 +183,7 @@ public class HomeScreen {
     }
 
     private static void chooseAndAddSauces(List<String> sauces) {
+        System.out.println();
         System.out.println("Available sauces:");
         printOptions(RegularToppings.getSauces());
         System.out.println("Choose sauce toppings (separated by ',') or type 'none':");
@@ -190,6 +197,7 @@ public class HomeScreen {
     }
 
     private static void chooseAndAddSides(List<String> sides) {
+        System.out.println();
         System.out.println("Available sides:");
         printOptions(RegularToppings.getSides());
         System.out.println("Choose side toppings (separated by ',') or type 'none':");
@@ -215,6 +223,7 @@ public class HomeScreen {
     }
 
     private static String chooseBreadType() {
+        System.out.println();
         System.out.println("Choose bread type:");
         System.out.println("1) White");
         System.out.println("2) Wheat");
@@ -239,6 +248,7 @@ public class HomeScreen {
     }
 
     private static String chooseSandwichSize() {
+        System.out.println();
         System.out.println("Choose sandwich size:");
         System.out.println("1) 4\"");
         System.out.println("2) 8\"");
@@ -260,7 +270,8 @@ public class HomeScreen {
     }
 
     private static void addDrink(Order order) {
-        System.out.println("Adding Drink:");
+        System.out.println();
+        System.out.println("---Adding Drink---");
 
         String size = chooseDrinkSize();
 
@@ -273,7 +284,6 @@ public class HomeScreen {
     }
 
     private static String chooseDrinkSize() {
-        System.out.println();
         System.out.println("Choose drink size:");
         System.out.println("1) Small");
         System.out.println("2) Medium");
@@ -301,7 +311,7 @@ public class HomeScreen {
 
     private static void addChips(Order order) {
         System.out.println();
-        System.out.println("Adding Chips:");
+        System.out.println("---Adding Chips---");
 
         String type = chooseChipType();
 
@@ -317,7 +327,7 @@ public class HomeScreen {
     }
 
     private static void checkout(Order order) {
-        System.out.println("\nCheckout");
+        System.out.println();
         System.out.println(order);
         double totalPrice = order.calculateTotalPrice();
         System.out.println("Total price: $" + String.format("%.2f", totalPrice));
